@@ -16,3 +16,30 @@ Content-Type: application/json
   "active": 315,
   "deaths": 8
 }
+###
+
+GET http://localhost:3001/districts/322/
+###
+
+DELETE http://localhost:3001/districts/3/
+###
+
+PUT http://localhost:3001/districts/322/
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+###
+
+GET http://localhost:3001/states/1/stats/
+###
+
+GET http://localhost:3001/districts/5/details/
+
+
