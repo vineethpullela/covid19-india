@@ -131,7 +131,7 @@ app.get("/districts/:districtId/details/", async (request, response) => {
   const { districtId } = request.params;
   const getStateNameQuery = `
     SELECT state_name FROM district LEFT JOIN state ON district.state_id = state.state_id WHERE district_id = ${districtId};`;
-  const stateNames = await db.all(getStateNameQuery);
+  const stateNames = await db.get(getStateNameQuery);
   const responseState = (stateNames) => {
     return {
       stateName: stateNames.state_name,
@@ -141,3 +141,5 @@ app.get("/districts/:districtId/details/", async (request, response) => {
 
   response.send(resultState);
 });
+
+module.exports = app;
