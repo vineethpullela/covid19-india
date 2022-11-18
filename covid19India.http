@@ -40,6 +40,6 @@ Content-Type: application/json
 GET http://localhost:3002/states/1/stats/
 ###
 
-GET http://localhost:3002/districts/5/details/
+GET http://localhost:3002/districts/2/details/
 
 
